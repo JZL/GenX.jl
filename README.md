@@ -1,5 +1,7 @@
 <div align="center"> <img src="docs/src/assets/logo_readme.svg"  height ="200"width="1000" alt="GenX.jl"></img></div>
 
+what a scaaarry typo thiis is!
+
 |  **Documentation** | **DOI** |
 |:-------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://genxproject.github.io/GenX.jl/stable/) [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://genxproject.github.io/GenX.jl/dev) | [![DOI](https://zenodo.org/badge/368957308.svg)](https://zenodo.org/doi/10.5281/zenodo.10846069) 
