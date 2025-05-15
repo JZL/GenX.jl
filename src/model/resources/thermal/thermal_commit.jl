@@ -153,9 +153,12 @@ function thermal_commit!(EP::Model, inputs::Dict, setup::Dict)
     end
 
     ## Power Balance Expressions ##
+    THERM_COMMIT_BY_ZONE = map(1:Z) do z
+        return intersect(THERM_COMMIT, resources_in_zone_by_rid(gen, z))
+    end
     @expression(EP, ePowerBalanceThermCommit[t = 1:T, z = 1:Z],
         sum(EP[:vP][y, t]
-        for y in intersect(THERM_COMMIT, resources_in_zone_by_rid(gen, z))))
+        for y in THERM_COMMIT_BY_ZONE[z]))
     add_similar_to_expression!(EP[:ePowerBalance], ePowerBalanceThermCommit)
 
     ### Constraints ###
@@ -421,7 +424,7 @@ function thermal_maintenance_capacity_reserve_margin_adjustment(EP::Model,
         t)
     gen = inputs["RESOURCES"]
     resource_component = resource_name(gen[y])
-    capresfactor = derating_factor(gen[y], tag = capres)
+    capresfactor = inputs["DERATING_FACTOR"][y, capres]
     cap = cap_size(gen[y])
     down_var = EP[Symbol(maintenance_down_name(resource_component))]
     return -capresfactor * down_var[t] * cap
