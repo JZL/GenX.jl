@@ -84,7 +84,7 @@ By default these four parasitic load parameters are $0$.
 
 The `parasitic_start_energy` and `parasitic_start_power` are related, as described above.
 If starting a plasma pulse in a 1000-MW-gross plant requires a draw of 500 MW for 3 minutes, then `parasitic_start_power` would be $0.5$ and `parasitic_start_energy` would be $(500/1000) * (3/60) = 0.025$, where 60 is the number of minutes in an hour. 
-The plasma startup sequence is assumed to be shorter than an hour: while this is not checked pragmatically, the `parasitic_start_power` should, logically, always be equal to or larger than the `parasitic_start_energy`.
+The plasma startup sequence is assumed to be shorter than an hour: while this is not checked programmatically, the `parasitic_start_power` should, logically, always be equal to or larger than the `parasitic_start_energy`.
 
 #### Dwell time
 The `dwell_time` parameter is expressed in fractions of an hour.
