@@ -83,7 +83,7 @@ function generate_model(setup::Dict, inputs::Dict, OPTIMIZER::MOI.OptimizerWithA
     create_empty_expression!(EP, :ePowerBalance, (T, Z))
 
     # Initialize Objective Function Expression
-    EP[:eObj] = BffExpr(0.0)
+    EP[:eObj] = AffExpr(0.0)
 
     create_empty_expression!(EP, :eGenerationByZone, (Z, T))
 
