@@ -357,7 +357,7 @@ Each file contains cost and performance parameters for various generators and ot
     Check `Qualified_Hydrogen_Supply` column in table 5a if electrolyzers are included in the model. This column is used to indicate which resources are eligible to supply electrolyzers in the same zone (used for hourly clean supply constraint).
 
 
-Each co-located VRE, electrolyzer, and storage resource can be easily configured to contain either a co-located VRE-ELEC-storage resource, standalone VRE resource (either wind, solar PV, or both), standalone eletrolyzers, or standalone storage resource.
+Each co-located VRE, electrolyzer, and storage resource can be easily configured to contain either a co-located VRE-ELEC-storage resource, standalone VRE resource (either wind, solar PV, or both), standalone electrolyzers, or standalone storage resource.
 ##### Table 12a: Additional columns in the Vre_stor.csv file
 
 ---
@@ -480,7 +480,7 @@ Each co-located VRE, electrolyzer, and storage resource can be easily configured
 ---
 |**Column Name** | **Description**|
 | :------------ | :-----------|
-|With_LOX | {0, 1}, Flag to indicate the availabity of liquid oxygen storage (LOX) for Allam Cycle.|
+|With_LOX | {0, 1}, Flag to indicate the availability of liquid oxygen storage (LOX) for Allam Cycle.|
 ||With_LOX = 0: LOX is not available.|
 ||With_LOX = 1: LOX is available.|
 |**Existing technology capacity**|
@@ -507,7 +507,7 @@ Each co-located VRE, electrolyzer, and storage resource can be easily configured
 |HeatRate\_sCO2|Heat rate of sCO2 turbines in an Allam Cycle power plant (MMBtu/MWh).|
 |LOX\_PowerUseRate\_O2|Power consumption by ASU to produce liquid oxygen (MWh/ton).|
 |GOX\_PowerUseRate\_O2|Power consumption by ASU to produce gaseous oxygen (MWh/ton).|
-|PowerUseRate\_other|Power consumption by anxilary processes in an Allam Cycle plant (MWh/MWh electricity generated from sCO2 turbines).|
+|PowerUseRate\_other|Power consumption by ancillary processes in an Allam Cycle plant (MWh/MWh electricity generated from sCO2 turbines).|
 |O2UseRate|Oxygen consumption by sCO2 turbines to produce electricity (ton/MWh).|
 |LOX_duration| Duration of LOX (Hour).|
 ##### Table 13b: Settings-specific columns in the Allam_Cycle_LOX.csv file

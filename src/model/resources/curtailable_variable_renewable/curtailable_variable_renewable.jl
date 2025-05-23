@@ -81,7 +81,7 @@ function curtailable_variable_renewable!(EP::Model, inputs::Dict, setup::Dict)
         fix.(EP[:vP][y, :], 0.0, force = true)
     end
 
-    ##CO2 Polcy Module VRE Generation by zone
+    ##CO2 Policy Module VRE Generation by zone
     # We use the transpose here because eGenerationByZone is [1:Z, 1:T] and
     # ePowerBalanceDisp is [1:T, 1:Z].
     add_similar_to_expression!(EP[:eGenerationByZone], ePowerBalanceDisp')

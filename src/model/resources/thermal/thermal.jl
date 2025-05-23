@@ -24,7 +24,7 @@ function thermal!(EP::Model, inputs::Dict, setup::Dict)
         thermal_no_commit!(EP, inputs, setup)
     end
 
-    ##CO2 Polcy Module Thermal Generation by zone
+    ##CO2 Policy Module Thermal Generation by zone
     THERM_ALL_BY_ZONE = map(1:Z) do z
         return intersect(THERM_ALL, resources_in_zone_by_rid(gen, z))
     end
